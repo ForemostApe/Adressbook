@@ -11,15 +11,15 @@ namespace Adressbook.Classes
     {
         private string _filePath = @"C:\temp\Adressbook.txt";
 
-        public Person Name { get; set; }
-        public Person Street { get; set; }
+        public AdressEntry Name { get; set; }
+        public AdressEntry Street { get; set; }
 
-        public Person PostalCode { get; set; }
-        public Person City { get; set; }
+        public AdressEntry PostalCode { get; set; }
+        public AdressEntry City { get; set; }
 
-        public Person PhoneNumber { get; set; }
+        public AdressEntry PhoneNumber { get; set; }
 
-        public Person Emailadress { get; set; }
+        public AdressEntry Emailadress { get; set; }
 
         public FileManager()
         {
@@ -41,4 +41,5 @@ namespace Adressbook.Classes
         }
     }
 }
+ 
 
