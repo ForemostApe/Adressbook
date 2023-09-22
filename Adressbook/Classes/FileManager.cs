@@ -23,13 +23,13 @@ namespace Adressbook.Classes
 
         public FileManager()
         {
-            
+
         }
 
 
-        public void WriteToFile() 
-        { 
-           using(StreamWriter _writer = new StreamWriter(_filePath));
+        public void WriteToFile()
+        {
+            using (StreamWriter _writer = new StreamWriter(_filePath)) ;
 
 
 
@@ -40,5 +40,5 @@ namespace Adressbook.Classes
 
         }
     }
- 
+}
 
