@@ -29,15 +29,24 @@ namespace Adressbook.Classes
 
         public void WriteToFile()
         {
-            using (StreamWriter _writer = new StreamWriter(_filePath)) ;
+            using (StreamWriter _writer = new StreamWriter(_filePath))
+            {
 
-
-
+            }
         }
 
-        public void ReadFromFile()
+        public string[] ReadFromFile()
         {
+            string row = string.Empty;
 
+            using (StreamReader _reader = new StreamReader(_filePath))
+            {
+                row = _reader.ReadToEnd();
+            }
+
+            string[] separatedFile = row.Split(',');
+
+            return separatedFile;
         }
     }
 }
