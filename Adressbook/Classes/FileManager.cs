@@ -10,43 +10,34 @@ namespace Adressbook.Classes
 
     {
         private string _filePath = @"C:\temp\Adressbook.txt";
-
-        public AdressEntry Name { get; set; }
-        public AdressEntry Street { get; set; }
-
-        public AdressEntry PostalCode { get; set; }
-        public AdressEntry City { get; set; }
-
-        public AdressEntry PhoneNumber { get; set; }
-
-        public AdressEntry Emailadress { get; set; }
-
         public FileManager()
         {
-
+            
         }
-
-
-        public void WriteToFile()
+        public FileManager(List<string> entriesToSave)
         {
+            //Ska man göra det här till en private method istället?
             using (StreamWriter _writer = new StreamWriter(_filePath))
             {
-
+                foreach (string entry in entriesToSave)
+                {
+                    _writer.WriteLine(entry);
+                }
             }
         }
-
-        public string[] ReadFromFile()
+        public void ReadFromFile()
         {
-            string row = string.Empty;
-
             using (StreamReader _reader = new StreamReader(_filePath))
             {
-                row = _reader.ReadToEnd();
+
+                //Läs in filen.
+                //lägg in varje rad som en entry in adressbook-listan
+                //Visa varje rad i listviewboxen.
+                if (_reader.ReadLine() != null) 
+                { 
+                    
+                }
             }
-
-            string[] separatedFile = row.Split(',');
-
-            return separatedFile;
         }
     }
 }

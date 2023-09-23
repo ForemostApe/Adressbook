@@ -1,6 +1,6 @@
 ﻿namespace Adressbook.Classes
 {
-    public class AdressEntry
+    public class Person
     {
         public string Name { get; set; }
         public string Street { get; set; }
@@ -9,14 +9,9 @@
         public string PhoneNumber { get; set; }
         public string EmailAdress { get; set; }
 
-        public AdressEntry(List<string> adressItems)
+        public Person()
         {
-            Name = adressItems[0];
-            Street = adressItems[1];
-            PostalCode = adressItems[2];
-            City = adressItems[3];
-            PhoneNumber = adressItems[4];
-            EmailAdress = adressItems[5];
+
         }
      
         public void AddEntryToAdressbook()

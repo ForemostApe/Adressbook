@@ -6,7 +6,6 @@ namespace Adressbook
     {
         List<string> adressbook = new List<string>();
 
-
         public FormAdressbook()
         {
             InitializeComponent();
@@ -24,21 +23,23 @@ namespace Adressbook
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            adressbook.Add(textName.Text);
-            adressbook.Add(textStreet.Text);
-            adressbook.Add(textPostalCode.Text);
-            adressbook.Add(textCity.Text);
-            adressbook.Add(textPhoneNumber.Text);
-            adressbook.Add(textEmailAdress.Text);
+            AddToList();
+        }
+        private void AddToList()
+        {
+            string adressbookEntry = $"{textName.Text}, {textStreet.Text}, {textZipcode.Text}, {textCity.Text}, {textPhoneNumber.Text}, {textEmailAdress.Text}";
+
+            adressbook.Add(adressbookEntry);
+
+            FileManager fileManager = new FileManager(adressbook);
 
             ClearTextFields();
         }
-
         private void ClearTextFields()
         {
             textName.Clear();
             textStreet.Clear();
-            textPostalCode.Clear();
+            textZipcode.Clear();
             textCity.Clear();
             textPhoneNumber.Clear();
             textEmailAdress.Clear();
@@ -62,13 +63,13 @@ namespace Adressbook
                 listEntry.SubItems.Add(adressbook[i]);
             }
 
-            //ListViewItem listEntry = new ListViewItem(adressbook[0]);
-            //listEntry.SubItems.Add(adressbook[1]);
-            //listEntry.SubItems.Add(adressbook[2]);
-            //listEntry.SubItems.Add(adressbook[3]);
-            //listEntry.SubItems.Add(adressbook[4]);
-            //listEntry.SubItems.Add(adressbook[5]);
-            //listEntry.SubItems.Add(adressbook[6]);
+            ////ListViewItem listEntry = new ListViewItem(adressbook[0]);
+            ////listEntry.SubItems.Add(adressbook[1]);
+            ////listEntry.SubItems.Add(adressbook[2]);
+            ////listEntry.SubItems.Add(adressbook[3]);
+            ////listEntry.SubItems.Add(adressbook[4]);
+            ////listEntry.SubItems.Add(adressbook[5]);
+            ////listEntry.SubItems.Add(adressbook[6]);
 
 
 
