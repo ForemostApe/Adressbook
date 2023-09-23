@@ -1,30 +1,35 @@
-﻿namespace Adressbook.Classes
+﻿using System.Reflection.Metadata.Ecma335;
+using System.Security.Policy;
+
+namespace Adressbook.Classes
 {
     public class AdressEntry
     {
         public string Name { get; set; }
         public string Street { get; set; }
-        public string PostalCode { get; set; }
+        public string ZipCode { get; set; }
         public string City { get; set; }
         public string PhoneNumber { get; set; }
         public string EmailAdress { get; set; }
 
-        public AdressEntry(List<string> adressItems)
+        public AdressEntry()
         {
-            Name = adressItems[0];
-            Street = adressItems[1];
-            PostalCode = adressItems[2];
-            City = adressItems[3];
-            PhoneNumber = adressItems[4];
-            EmailAdress = adressItems[5];
-        }
-     
-        public void AddEntryToAdressbook()
-        {
-            
 
         }
-            
+
+        //Constructorn tar emot 6st strings som sen sätts som publika. Inga tester utförs utan allt är bara ren pass-through i nuläget.
+        public AdressEntry(string aName, string aStreet, string aZipCode, string aCity, string aPhoneNumber, string aEmailAdress)
+        
+        {
+            Name = aName;
+            Street = aStreet;
+            ZipCode = aZipCode;
+            City = aCity;
+            PhoneNumber = aPhoneNumber;
+            EmailAdress = aEmailAdress;
+        }
+
+        
     }
 }
     

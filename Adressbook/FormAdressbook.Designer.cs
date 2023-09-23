@@ -36,11 +36,11 @@
             labelEmailAdress = new Label();
             textName = new TextBox();
             textStreet = new TextBox();
-            textPostalCode = new TextBox();
+            textZipCode = new TextBox();
             textCity = new TextBox();
             textPhoneNumber = new TextBox();
             textEmailAdress = new TextBox();
-            listAdressViewPort = new ListView();
+            listAdressEntries = new ListView();
             columnName = new ColumnHeader();
             columnStreet = new ColumnHeader();
             columnPostalCode = new ColumnHeader();
@@ -131,14 +131,14 @@
             textStreet.Size = new Size(179, 23);
             textStreet.TabIndex = 7;
             // 
-            // textPostalCode
+            // textZipCode
             // 
-            textPostalCode.BorderStyle = BorderStyle.FixedSingle;
-            textPostalCode.Location = new Point(28, 146);
-            textPostalCode.Margin = new Padding(2, 1, 2, 1);
-            textPostalCode.Name = "textPostalCode";
-            textPostalCode.Size = new Size(179, 23);
-            textPostalCode.TabIndex = 8;
+            textZipCode.BorderStyle = BorderStyle.FixedSingle;
+            textZipCode.Location = new Point(28, 146);
+            textZipCode.Margin = new Padding(2, 1, 2, 1);
+            textZipCode.Name = "textZipCode";
+            textZipCode.Size = new Size(179, 23);
+            textZipCode.TabIndex = 8;
             // 
             // textCity
             // 
@@ -167,19 +167,20 @@
             textEmailAdress.Size = new Size(179, 23);
             textEmailAdress.TabIndex = 11;
             // 
-            // listAdressViewPort
+            // listAdressEntries
             // 
-            listAdressViewPort.BorderStyle = BorderStyle.FixedSingle;
-            listAdressViewPort.Columns.AddRange(new ColumnHeader[] { columnName, columnStreet, columnPostalCode, columnCity, columnPhoneNumber, columnEmailAdress });
-            listAdressViewPort.FullRowSelect = true;
-            listAdressViewPort.Location = new Point(232, 46);
-            listAdressViewPort.Margin = new Padding(2, 1, 2, 1);
-            listAdressViewPort.Name = "listAdressViewPort";
-            listAdressViewPort.Size = new Size(750, 273);
-            listAdressViewPort.TabIndex = 12;
-            listAdressViewPort.UseCompatibleStateImageBehavior = false;
-            listAdressViewPort.View = View.Details;
-            listAdressViewPort.SelectedIndexChanged += listAdressViewPort_SelectedIndexChanged;
+            listAdressEntries.BorderStyle = BorderStyle.FixedSingle;
+            listAdressEntries.Columns.AddRange(new ColumnHeader[] { columnName, columnStreet, columnPostalCode, columnCity, columnPhoneNumber, columnEmailAdress });
+            listAdressEntries.FullRowSelect = true;
+            listAdressEntries.Location = new Point(232, 46);
+            listAdressEntries.Margin = new Padding(2, 1, 2, 1);
+            listAdressEntries.Name = "listAdressEntries";
+            listAdressEntries.Size = new Size(750, 273);
+            listAdressEntries.TabIndex = 12;
+            listAdressEntries.UseCompatibleStateImageBehavior = false;
+            listAdressEntries.View = View.Details;
+            listAdressEntries.SelectedIndexChanged += listAdressEntries_SelectedIndexChanged;
+            listAdressEntries.Click += listAdressEntries_Click;
             // 
             // columnName
             // 
@@ -240,6 +241,7 @@
             buttonSearch.TabIndex = 15;
             buttonSearch.Text = "Sök";
             buttonSearch.UseVisualStyleBackColor = true;
+            buttonSearch.Click += buttonSearch_Click;
             // 
             // buttonDelete
             // 
@@ -250,6 +252,7 @@
             buttonDelete.TabIndex = 16;
             buttonDelete.Text = "Ta bort";
             buttonDelete.UseVisualStyleBackColor = true;
+            buttonDelete.Click += buttonDelete_Click;
             // 
             // FormAdressbook
             // 
@@ -260,11 +263,11 @@
             Controls.Add(buttonSearch);
             Controls.Add(buttonSave);
             Controls.Add(textSearchBox);
-            Controls.Add(listAdressViewPort);
+            Controls.Add(listAdressEntries);
             Controls.Add(textEmailAdress);
             Controls.Add(textPhoneNumber);
             Controls.Add(textCity);
-            Controls.Add(textPostalCode);
+            Controls.Add(textZipCode);
             Controls.Add(textStreet);
             Controls.Add(textName);
             Controls.Add(labelEmailAdress);
@@ -291,11 +294,11 @@
         private Label labelEmailAdress;
         private TextBox textName;
         private TextBox textStreet;
-        private TextBox textPostalCode;
+        private TextBox textZipCode;
         private TextBox textCity;
         private TextBox textPhoneNumber;
         private TextBox textEmailAdress;
-        private ListView listAdressViewPort;
+        private ListView listAdressEntries;
         private TextBox textSearchBox;
         private Button buttonSave;
         private Button buttonSearch;

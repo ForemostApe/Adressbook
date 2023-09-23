@@ -11,30 +11,38 @@ namespace Adressbook.Classes
     {
         private string _filePath = @"C:\temp\Adressbook.txt";
 
-        public AdressEntry Name { get; set; }
-        public AdressEntry Street { get; set; }
-
-        public AdressEntry PostalCode { get; set; }
-        public AdressEntry City { get; set; }
-
-        public AdressEntry PhoneNumber { get; set; }
-
-        public AdressEntry Emailadress { get; set; }
+        public string Name { get; set; }
+        public string Street { get; set; }
+        public string ZipCode { get; set; }
+        public string City { get; set; }
+        public string PhoneNumber { get; set; }
+        public string EmailAdress { get; set; }
 
         public FileManager()
         {
-
+            
         }
 
-
-        public void WriteToFile()
+        //Constructorn tar emot värden som sen skjuts in i getters:setters för enhetlig namnsättning.
+        public FileManager(string aName, string aStreet, string aZipCode, string aCity, string aPhoneNumber, string aEmailAdress)
         {
-            using (StreamWriter _writer = new StreamWriter(_filePath))
-            {
+            Name = aName;
+            Street = aStreet;
+            ZipCode = aZipCode;
+            City = aCity;
+            PhoneNumber = aPhoneNumber;
+            EmailAdress = aEmailAdress;
 
+            //StreamWriter initieras och objektet _writer skapas. Sökvägen för filen som ska skrivas till hämtas från stringen '_filePath' och är inställd på att lägga till istället för att skriva över eftersom append = true.
+            using (StreamWriter _writer = new StreamWriter(_filePath, true))
+            {
+                {
+                    //Skriver instansvariablerna till den angivna filen.
+                    _writer.WriteLine($"{Name}, {Street}, {ZipCode}, {City}, {PhoneNumber}, {EmailAdress}");
+                }
             }
         }
-
+        
         public string[] ReadFromFile()
         {
             string row = string.Empty;
@@ -46,8 +54,12 @@ namespace Adressbook.Classes
 
             string[] separatedFile = row.Split(',');
 
+
+
             return separatedFile;
         }
+
+
     }
 }
  
