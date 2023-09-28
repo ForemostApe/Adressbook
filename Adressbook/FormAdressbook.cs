@@ -106,6 +106,8 @@ namespace Adressbook
             {
                 listAdressEntries.Items.Remove(listAdressEntries.SelectedItems[0]);
             }
+
+            //int rowIndex = listAdressEntries.Selected; KOLLA HÄR!!!!
         }
     }
 }
