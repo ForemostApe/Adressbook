@@ -19,7 +19,7 @@ namespace Adressbook
         private void buttonSave_Click(object sender, EventArgs e)
         {
             //Initierar ett nytt objekt och skickar värdena från textboxarna till constructorn i AdressEntry-klassen.
-            AdressEntry adressEntry = new AdressEntry(textName.Text, textStreet.Text, textZipCode.Text, textCity.Text, textPhoneNumber.Text, textEmailAdress.Text);
+            Person adressEntry = new Person(textName.Text, textStreet.Text, textZipCode.Text, textCity.Text, textPhoneNumber.Text, textEmailAdress.Text);
 
             //Initierar ett nytt ListViewItem-objekt med namnet 'list' och hämtar item plus subitems från adressEntry-klassen.
             ListViewItem list = new ListViewItem(adressEntry.Name);

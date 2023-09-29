@@ -3,7 +3,7 @@ using System.Security.Policy;
 
 namespace Adressbook.Classes
 {
-    public class AdressEntry
+    public class Person
     {
         public string Name { get; set; }
         public string Street { get; set; }
@@ -12,13 +12,13 @@ namespace Adressbook.Classes
         public string PhoneNumber { get; set; }
         public string EmailAdress { get; set; }
 
-        public AdressEntry()
+        public Person()
         {
 
         }
 
         //Constructorn tar emot 6st strings som sen sätts som publika. Inga tester utförs utan allt är bara ren pass-through i nuläget.
-        public AdressEntry(string aName, string aStreet, string aZipCode, string aCity, string aPhoneNumber, string aEmailAdress)
+        public Person(string aName, string aStreet, string aZipCode, string aCity, string aPhoneNumber, string aEmailAdress)
         
         {
             Name = aName;
