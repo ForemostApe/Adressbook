@@ -27,6 +27,7 @@ namespace Adressbook
         }
         private void AddToList()
         {
+            //Det här måste ju in i ett Person-objekt FIH!
             string adressbookEntry = $"{textName.Text}, {textStreet.Text}, {textZipcode.Text}, {textCity.Text}, {textPhoneNumber.Text}, {textEmailAdress.Text}";
 
             adressbook.Add(adressbookEntry);
@@ -47,38 +48,40 @@ namespace Adressbook
 
         private void LoadFileToList()
         {
-            FileManager fileManager = new FileManager();
+            //FileManager fileManager = new FileManager();
 
-            foreach (string entry in fileManager.ReadFromFile())
+            //foreach (string entry in fileManager.ReadFromFile())
+            //{
+            //    adressbook.Add(entry.ToString());
+            //}
+
+
+            if (adressbook.Count > 0)
             {
-                adressbook.Add(entry.ToString());
+                ListView listView = new ListView();
+
+                if (listView.Items.Count > 0)
+                {
+                    ListViewItem listEntry = new ListViewItem(adressbook[0]);
+
+                    for (int i = 0; i < adressbook.Count; i++)
+                    {
+                        listEntry.SubItems.Add(adressbook[i]);
+                    }
+
+                    //ListViewItem listEntry = new ListViewItem(adressbook[0]);
+                    //listEntry.SubItems.Add(adressbook[1]);
+                    //listEntry.SubItems.Add(adressbook[2]);
+                    //listEntry.SubItems.Add(adressbook[3]);
+                    //listEntry.SubItems.Add(adressbook[4]);
+                    //listEntry.SubItems.Add(adressbook[5]);
+                    //listEntry.SubItems.Add(adressbook[6]);
+
+                    listAdressViewPort.Items.AddRange(new ListViewItem[] { listEntry });
+                }
             }
-
-            ListView listView = new ListView();
-
-            ListViewItem listEntry = new ListViewItem(adressbook[0]);
-
-            for (int i = 0; i < adressbook.Count; i++)
-            {
-                listEntry.SubItems.Add(adressbook[i]);
-            }
-
-            ////ListViewItem listEntry = new ListViewItem(adressbook[0]);
-            ////listEntry.SubItems.Add(adressbook[1]);
-            ////listEntry.SubItems.Add(adressbook[2]);
-            ////listEntry.SubItems.Add(adressbook[3]);
-            ////listEntry.SubItems.Add(adressbook[4]);
-            ////listEntry.SubItems.Add(adressbook[5]);
-            ////listEntry.SubItems.Add(adressbook[6]);
-
-
-
-            listAdressViewPort.Items.AddRange(new ListViewItem[] { listEntry });
-
-
         }
     }
-
 }
 
 

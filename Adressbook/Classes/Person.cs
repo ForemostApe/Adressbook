@@ -12,14 +12,7 @@
         public Person()
         {
 
-        }
-     
-        public void AddEntryToAdressbook()
-        {
-            
-
-        }
-            
+        }         
     }
 }
     
