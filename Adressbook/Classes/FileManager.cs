@@ -47,9 +47,13 @@ namespace Adressbook.Classes
         {
             string row = string.Empty;
 
-            using (StreamReader _reader = new StreamReader(_filePath))
-            {
-                row = _reader.ReadToEnd();
+                //Läs in filen.
+                //lägg in varje rad som en entry in adressbook-listan
+                //Visa varje rad i listviewboxen.
+                if (_reader.ReadLine() != null) 
+                {
+                    _reader.ReadLine();
+                }
             }
 
             string[] separatedFile = row.Split(',');

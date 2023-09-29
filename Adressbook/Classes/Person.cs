@@ -15,7 +15,7 @@ namespace Adressbook.Classes
         public Person()
         {
 
-        }
+        }         
 
         //Constructorn tar emot 6st strings som sen sätts som publika. Inga tester utförs utan allt är bara ren pass-through i nuläget.
         public Person(string aName, string aStreet, string aZipCode, string aCity, string aPhoneNumber, string aEmailAdress)

@@ -46,7 +46,6 @@ namespace Adressbook
             //Anropar en metod för att tömma textfälten efter att man sparat värdena.
             ClearTextFields();
         }
-
         private void ClearTextFields()
         {
             textName.Clear();
