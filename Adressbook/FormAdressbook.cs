@@ -4,7 +4,7 @@ namespace Adressbook
 {
     public partial class FormAdressbook : Form
     {
-        List<string> adressBook = new List<string>();
+        List<Person> adressBook = new List<Person>();
 
         public FormAdressbook()
         {
@@ -31,12 +31,17 @@ namespace Adressbook
             listAdressEntries.Items.Add(list); //Lägger till alla items i 'list'-objektet i det visuella fönstret. 
 
             //Lägger till textboxvärdena i en lista. Måste finnas ett bättre sätt att göra allt det här på.
-            adressBook.Add(adressEntry.Name);
-            adressBook.Add(adressEntry.Street);
-            adressBook.Add(adressEntry.ZipCode);
-            adressBook.Add(adressEntry.City);
-            adressBook.Add(adressEntry.PhoneNumber);
-            adressBook.Add(adressEntry.EmailAdress);
+            //Funkar inte efter att jag ändrade 'adressBook' till att ta emot Person-objekt.
+            //adressBook.Add(adressEntry.Name);
+            //adressBook.Add(adressEntry.Street);
+            //adressBook.Add(adressEntry.ZipCode);
+            //adressBook.Add(adressEntry.City);
+            //adressBook.Add(adressEntry.PhoneNumber);
+            //adressBook.Add(adressEntry.EmailAdress);
+
+
+            adressBook.Add(adressEntry);
+     
 
             //Initierar ett nytt fileManager-objekt från FileManager-klassen och skickar textbox-värdena till constructorn.
             FileManager fileManager = new FileManager(textName.Text, textStreet.Text, textZipCode.Text, textCity.Text, textPhoneNumber.Text, textEmailAdress.Text);
@@ -46,6 +51,7 @@ namespace Adressbook
             //Anropar en metod för att tömma textfälten efter att man sparat värdena.
             ClearTextFields();
         }
+
         private void ClearTextFields()
         {
             textName.Clear();
@@ -59,6 +65,7 @@ namespace Adressbook
         private void listAdressEntries_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+                
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
@@ -70,17 +77,17 @@ namespace Adressbook
             listAdressEntries.FindItemWithText(searchString);
 
             //Funkar inte eftersom värdena är sparade individuellt istället för som en lång string med allt i ett.
-            foreach (string entry in adressBook)
-            {
+            //Funkar inte efter att jag ändrade 'adressBook' till att ta emot objekt.
+            //foreach (string entry in adressBook)
+            //{
 
-                if (entry.ToLower().Equals(searchString.ToLower()))
-                {
-                    {
-                        listAdressEntries.Items.Add(entry);
-                    }
-                }
-
-            }
+            //    if (entry.ToLower().Equals(searchString.ToLower()))
+            //    {
+            //        {
+            //            listAdressEntries.Items.Add(entry);
+            //        }
+            //    }
+            //}
         }
 
         private void listAdressEntries_Click(object sender, EventArgs e)

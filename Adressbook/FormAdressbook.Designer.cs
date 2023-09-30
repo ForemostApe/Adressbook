@@ -56,79 +56,79 @@
             // labelName
             // 
             labelName.AutoSize = true;
-            labelName.Location = new Point(56, 64);
-            labelName.Margin = new Padding(4, 0, 4, 0);
+            labelName.Location = new Point(30, 30);
+            labelName.Margin = new Padding(2, 0, 2, 0);
             labelName.Name = "labelName";
-            labelName.Size = new Size(79, 32);
+            labelName.Size = new Size(40, 15);
             labelName.TabIndex = 0;
             labelName.Text = "Namn";
             // 
             // labelStreet
             // 
             labelStreet.AutoSize = true;
-            labelStreet.Location = new Point(56, 171);
-            labelStreet.Margin = new Padding(4, 0, 4, 0);
+            labelStreet.Location = new Point(30, 80);
+            labelStreet.Margin = new Padding(2, 0, 2, 0);
             labelStreet.Name = "labelStreet";
-            labelStreet.Size = new Size(131, 32);
+            labelStreet.Size = new Size(65, 15);
             labelStreet.TabIndex = 1;
             labelStreet.Text = "Gatuadress";
             // 
             // labelPostalCode
             // 
             labelPostalCode.AutoSize = true;
-            labelPostalCode.Location = new Point(56, 277);
-            labelPostalCode.Margin = new Padding(4, 0, 4, 0);
+            labelPostalCode.Location = new Point(30, 130);
+            labelPostalCode.Margin = new Padding(2, 0, 2, 0);
             labelPostalCode.Name = "labelPostalCode";
-            labelPostalCode.Size = new Size(149, 32);
+            labelPostalCode.Size = new Size(76, 15);
             labelPostalCode.TabIndex = 2;
             labelPostalCode.Text = "Postnummer";
             // 
             // labelCity
             // 
             labelCity.AutoSize = true;
-            labelCity.Location = new Point(56, 384);
-            labelCity.Margin = new Padding(4, 0, 4, 0);
+            labelCity.Location = new Point(30, 180);
+            labelCity.Margin = new Padding(2, 0, 2, 0);
             labelCity.Name = "labelCity";
-            labelCity.Size = new Size(88, 32);
+            labelCity.Size = new Size(45, 15);
             labelCity.TabIndex = 3;
             labelCity.Text = "Postort";
             // 
             // labelPhoneNumber
             // 
             labelPhoneNumber.AutoSize = true;
-            labelPhoneNumber.Location = new Point(56, 491);
-            labelPhoneNumber.Margin = new Padding(4, 0, 4, 0);
+            labelPhoneNumber.Location = new Point(30, 230);
+            labelPhoneNumber.Margin = new Padding(2, 0, 2, 0);
             labelPhoneNumber.Name = "labelPhoneNumber";
-            labelPhoneNumber.Size = new Size(184, 32);
+            labelPhoneNumber.Size = new Size(91, 15);
             labelPhoneNumber.TabIndex = 4;
             labelPhoneNumber.Text = "Telefonnummer";
             // 
             // labelEmailAdress
             // 
             labelEmailAdress.AutoSize = true;
-            labelEmailAdress.Location = new Point(56, 597);
-            labelEmailAdress.Margin = new Padding(4, 0, 4, 0);
+            labelEmailAdress.Location = new Point(30, 280);
+            labelEmailAdress.Margin = new Padding(2, 0, 2, 0);
             labelEmailAdress.Name = "labelEmailAdress";
-            labelEmailAdress.Size = new Size(138, 32);
+            labelEmailAdress.Size = new Size(69, 15);
             labelEmailAdress.TabIndex = 5;
             labelEmailAdress.Text = "Emailadress";
             // 
             // textName
             // 
             textName.BorderStyle = BorderStyle.FixedSingle;
-            textName.Location = new Point(56, 98);
-            textName.Margin = new Padding(4, 2, 4, 2);
+            textName.Location = new Point(30, 46);
+            textName.Margin = new Padding(2, 1, 2, 1);
             textName.Name = "textName";
-            textName.Size = new Size(331, 39);
+            textName.Size = new Size(179, 23);
             textName.TabIndex = 6;
             // 
             // textStreet
             // 
             textStreet.BorderStyle = BorderStyle.FixedSingle;
-            textStreet.Location = new Point(56, 205);
-            textStreet.Margin = new Padding(4, 2, 4, 2);
+            textStreet.Location = new Point(30, 96);
+            textStreet.Margin = new Padding(2, 1, 2, 1);
             textStreet.Name = "textStreet";
-            textStreet.Size = new Size(331, 39);
+            textStreet.Size = new Size(179, 23);
             textStreet.TabIndex = 7;
             // 
             // textZipCode
@@ -143,28 +143,28 @@
             // textCity
             // 
             textCity.BorderStyle = BorderStyle.FixedSingle;
-            textCity.Location = new Point(56, 418);
-            textCity.Margin = new Padding(4, 2, 4, 2);
+            textCity.Location = new Point(30, 196);
+            textCity.Margin = new Padding(2, 1, 2, 1);
             textCity.Name = "textCity";
-            textCity.Size = new Size(331, 39);
+            textCity.Size = new Size(179, 23);
             textCity.TabIndex = 9;
             // 
             // textPhoneNumber
             // 
             textPhoneNumber.BorderStyle = BorderStyle.FixedSingle;
-            textPhoneNumber.Location = new Point(56, 525);
-            textPhoneNumber.Margin = new Padding(4, 2, 4, 2);
+            textPhoneNumber.Location = new Point(30, 246);
+            textPhoneNumber.Margin = new Padding(2, 1, 2, 1);
             textPhoneNumber.Name = "textPhoneNumber";
-            textPhoneNumber.Size = new Size(331, 39);
+            textPhoneNumber.Size = new Size(179, 23);
             textPhoneNumber.TabIndex = 10;
             // 
             // textEmailAdress
             // 
             textEmailAdress.BorderStyle = BorderStyle.FixedSingle;
-            textEmailAdress.Location = new Point(56, 631);
-            textEmailAdress.Margin = new Padding(4, 2, 4, 2);
+            textEmailAdress.Location = new Point(30, 296);
+            textEmailAdress.Margin = new Padding(2, 1, 2, 1);
             textEmailAdress.Name = "textEmailAdress";
-            textEmailAdress.Size = new Size(331, 39);
+            textEmailAdress.Size = new Size(179, 23);
             textEmailAdress.TabIndex = 11;
             // 
             // listAdressEntries
@@ -172,10 +172,10 @@
             listAdressEntries.BorderStyle = BorderStyle.FixedSingle;
             listAdressEntries.Columns.AddRange(new ColumnHeader[] { columnName, columnStreet, columnPostalCode, columnCity, columnPhoneNumber, columnEmailAdress });
             listAdressEntries.FullRowSelect = true;
-            listAdressEntries.Location = new Point(232, 46);
+            listAdressEntries.Location = new Point(242, 96);
             listAdressEntries.Margin = new Padding(2, 1, 2, 1);
             listAdressEntries.Name = "listAdressEntries";
-            listAdressEntries.Size = new Size(750, 273);
+            listAdressEntries.Size = new Size(750, 223);
             listAdressEntries.TabIndex = 12;
             listAdressEntries.UseCompatibleStateImageBehavior = false;
             listAdressEntries.View = View.Details;
@@ -215,18 +215,18 @@
             // textSearchBox
             // 
             textSearchBox.BorderStyle = BorderStyle.FixedSingle;
-            textSearchBox.Location = new Point(431, 706);
-            textSearchBox.Margin = new Padding(4, 2, 4, 2);
+            textSearchBox.Location = new Point(242, 46);
+            textSearchBox.Margin = new Padding(2, 1, 2, 1);
             textSearchBox.Name = "textSearchBox";
-            textSearchBox.Size = new Size(667, 39);
+            textSearchBox.Size = new Size(350, 23);
             textSearchBox.TabIndex = 13;
             // 
             // buttonSave
             // 
-            buttonSave.Location = new Point(240, 708);
-            buttonSave.Margin = new Padding(4, 2, 4, 2);
+            buttonSave.Location = new Point(129, 332);
+            buttonSave.Margin = new Padding(2, 1, 2, 1);
             buttonSave.Name = "buttonSave";
-            buttonSave.Size = new Size(150, 47);
+            buttonSave.Size = new Size(81, 22);
             buttonSave.TabIndex = 14;
             buttonSave.Text = "Spara";
             buttonSave.UseVisualStyleBackColor = true;
@@ -234,10 +234,10 @@
             // 
             // buttonSearch
             // 
-            buttonSearch.Location = new Point(1133, 708);
-            buttonSearch.Margin = new Padding(4, 2, 4, 2);
+            buttonSearch.Location = new Point(605, 46);
+            buttonSearch.Margin = new Padding(2, 1, 2, 1);
             buttonSearch.Name = "buttonSearch";
-            buttonSearch.Size = new Size(150, 47);
+            buttonSearch.Size = new Size(81, 23);
             buttonSearch.TabIndex = 15;
             buttonSearch.Text = "Sök";
             buttonSearch.UseVisualStyleBackColor = true;
@@ -245,10 +245,10 @@
             // 
             // buttonDelete
             // 
-            buttonDelete.Location = new Point(1673, 702);
-            buttonDelete.Margin = new Padding(4, 2, 4, 2);
+            buttonDelete.Location = new Point(911, 332);
+            buttonDelete.Margin = new Padding(2, 1, 2, 1);
             buttonDelete.Name = "buttonDelete";
-            buttonDelete.Size = new Size(150, 47);
+            buttonDelete.Size = new Size(81, 22);
             buttonDelete.TabIndex = 16;
             buttonDelete.Text = "Ta bort";
             buttonDelete.UseVisualStyleBackColor = true;
@@ -256,9 +256,9 @@
             // 
             // FormAdressbook
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1892, 817);
+            ClientSize = new Size(1027, 383);
             Controls.Add(buttonDelete);
             Controls.Add(buttonSearch);
             Controls.Add(buttonSave);
@@ -276,7 +276,7 @@
             Controls.Add(labelPostalCode);
             Controls.Add(labelStreet);
             Controls.Add(labelName);
-            Margin = new Padding(4, 2, 4, 2);
+            Margin = new Padding(2, 1, 2, 1);
             Name = "FormAdressbook";
             Text = "FormAdressbook";
             Load += FormAdressbook_Load;
