@@ -179,7 +179,7 @@
             listAdressEntries.TabIndex = 12;
             listAdressEntries.UseCompatibleStateImageBehavior = false;
             listAdressEntries.View = View.Details;
-            listAdressEntries.SelectedIndexChanged += listAdressEntries_SelectedIndexChanged;
+            listAdressEntries.SelectedIndexChanged += listAdressEntries_SelectedIndexChanged_1;
             listAdressEntries.Click += listAdressEntries_Click;
             // 
             // columnName
