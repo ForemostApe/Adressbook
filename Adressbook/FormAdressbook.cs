@@ -58,7 +58,7 @@ namespace Adressbook
                 if (searchCondition.Length > 0)
                 {
                     //Söker på sökkriteriet man fyllt i Sök-fältet och visar träffar.
-                    if (searchCondition.ToLower().Contains(entry.Name.ToString().ToLower()) || searchCondition.ToLower().Trim().Contains(entry.City.ToString().ToLower()))
+                    if (entry.Name.ToString().ToLower().Contains(searchCondition.ToLower().Trim()) || entry.City.ToString().ToLower().Contains(searchCondition.ToLower().Trim()))
                     {
                         PopulateListView(entry);
                     }
@@ -75,6 +75,8 @@ namespace Adressbook
                     }
                 }
             }
+            ClearTextFields();
+
         }
 
         private void listAdressEntries_SelectedIndexChanged_1(object sender, EventArgs e)
