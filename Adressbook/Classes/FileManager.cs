@@ -42,55 +42,31 @@ namespace Adressbook.Classes
             }
         }
         
-        public Person ReadFromFile()
+        public List<Person> ReadFromFile()
         {
-            string row = string.Empty;
-
-            //using (StreamReader _reader = new StreamReader(_filePath))
-            //{
-            //    row = _reader.ReadToEnd();
-            //}
-
             using (StreamReader _reader = new StreamReader(_filePath))
             {
-                Person person = new Person();
+                List<Person> personList = new List<Person>();
 
-                if (_reader.ReadLine() != null)
+                string row = string.Empty;
+
+                while ((row = _reader.ReadLine()) != null)
                 {
-                    row = _reader.ReadLine();
+                    Person person = new Person();
+
                     string[] separatedFile = row.Split(',');
-                    
+
                     person.Name = separatedFile[0];
                     person.Street = separatedFile[1];
                     person.ZipCode = separatedFile[2];
                     person.City = separatedFile[3];
                     person.PhoneNumber = separatedFile[4];
                     person.EmailAdress = separatedFile[5];
+                    personList.Add(person);
                 }
-                return person;
+                return personList;
             }
-
-
-            //string[] separatedFile = row.Split(',');
-
-            //Person person = new Person();
-            //person.Name = separatedFile[0];
-            //person.Street = separatedFile[1];
-            //person.ZipCode = separatedFile[2];
-            //person.City = separatedFile[3];
-            //person.PhoneNumber = separatedFile[4];
-            //person.EmailAdress = separatedFile[5];
-
-            //return person;
         }
-
-
-        //public void DeleteFromFile(int rowIndex)
-        //{
-        //    int rowToDelete = rowIndex;
-        //    int rowIndex = listAdressEntries.SelectedItems.Count;
-        //}
-
     }
 }
  

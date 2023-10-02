@@ -1,5 +1,6 @@
 ﻿using Adressbook.Classes;
 using System;
+using System.Windows.Forms;
 
 namespace Adressbook
 {
@@ -15,9 +16,8 @@ namespace Adressbook
         private void FormAdressbook_Load(object sender, EventArgs e)
         {
             FileManager fileManager = new FileManager();
-            adressBook.Add(fileManager.ReadFromFile()); //Vet inte ens om den här gör något just nu.
-
-        }  
+            adressBook = fileManager.ReadFromFile();
+        }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
@@ -58,22 +58,27 @@ namespace Adressbook
         {
             listAdressEntries.Items.Clear();
 
-            string searchString = textSearchBox.Text;
+            foreach (Person entry in adressBook) 
+            {
+                string searchCondition = textSearchBox.Text;
 
-            listAdressEntries.FindItemWithText(searchString);
+                if (searchCondition.ToLower().Contains(entry.Name.ToString().ToLower()) ||
+                    textSearchBox.Text.Contains(entry.Street.ToString().ToLower()) ||
+                    textSearchBox.Text.Contains(entry.ZipCode.ToString().ToLower()) ||
+                    textSearchBox.Text.Contains(entry.City.ToString().ToLower()) ||
+                    textSearchBox.Text.Contains(entry.PhoneNumber.ToString().ToLower()) ||
+                    textSearchBox.Text.Contains(entry.EmailAdress.ToString().ToLower()))
 
-            //Funkar inte eftersom värdena är sparade individuellt istället för som en lång string med allt i ett.
-            //Funkar inte efter att jag ändrade 'adressBook' till att ta emot objekt.
-            //foreach (string entry in adressBook)
-            //{
-
-            //    if (entry.ToLower().Equals(searchString.ToLower()))
-            //    {
-            //        {
-            //            listAdressEntries.Items.Add(entry);
-            //        }
-            //    }
-            //}
+                {
+                    ListViewItem list = new ListViewItem(entry.Name);
+                    list.SubItems.Add(entry.Street); //Initierar ett nytt ListViewItem-objekt med namnet 'list' och hämtar item plus subitems från adressEntry-klassen.
+                    list.SubItems.Add(entry.ZipCode);
+                    list.SubItems.Add(entry.City);
+                    list.SubItems.Add(entry.PhoneNumber);
+                    list.SubItems.Add(entry.EmailAdress);
+                    listAdressEntries.Items.Add(list); //Lägger till alla items i 'list'-objektet i det visuella fönstret.
+                }
+            }
         }
 
         private void listAdressEntries_SelectedIndexChanged_1(object sender, EventArgs e)
