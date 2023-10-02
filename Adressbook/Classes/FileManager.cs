@@ -1,61 +1,49 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Adressbook.Classes
+﻿namespace Adressbook.Classes
 {
     public class FileManager
 
     {
         private string _filePath = @"C:\temp\Adressbook.txt";
 
-        public string Name { get; set; }
-        public string Street { get; set; }
-        public string ZipCode { get; set; }
-        public string City { get; set; }
-        public string PhoneNumber { get; set; }
-        public string EmailAdress { get; set; }
-
         public FileManager()
         {
-            
+
         }
 
-        public FileManager(Person person)
+        //Constructorn tar emot en lista med personobjekt.
+        public FileManager(List<Person> persons)
         {
-            Name = person.Name;
-            Street = person.Street;
-            ZipCode = person.ZipCode;
-            City = person.City;
-            PhoneNumber = person.PhoneNumber;
-            EmailAdress = person.EmailAdress;
-
-            //StreamWriter initieras och objektet _writer skapas. Sökvägen för filen som ska skrivas till hämtas från stringen '_filePath' och är inställd på att lägga till istället för att skriva över eftersom append = true.
-            using (StreamWriter _writer = new StreamWriter(_filePath, true))
+            //Streamwritern initieras och hämtar sökvägen från '_filepath'-variabeln.
+            using (StreamWriter _writer = new StreamWriter(_filePath))
             {
+                //Varje personobjekt i listan loopas igenom och dess properties skrivs till filen.
+                foreach (Person entry in persons)
                 {
-                    //Skriver instansvariablerna till den angivna filen.
-                    _writer.WriteLine($"{Name},{Street},{ZipCode},{City},{PhoneNumber},{EmailAdress}");
+                    _writer.WriteLine($"{entry.Name},{entry.Street},{entry.ZipCode},{entry.City},{entry.PhoneNumber},{entry.EmailAdress}");
                 }
             }
         }
-        
+
         public List<Person> ReadFromFile()
         {
             using (StreamReader _reader = new StreamReader(_filePath))
             {
+                //En ny lista med personobjekt initieras.
                 List<Person> personList = new List<Person>();
+
 
                 string row = string.Empty;
 
-                while ((row = _reader.ReadLine()) != null)
+                //En while-loop som fortsätter rad för rad i filen tills den kommer till en tom rad. 'row' ges värdet av varje rad för sig.
+                while ((row = _reader.ReadLine()) != null) //Borde kanske finnas en try-catch här?
                 {
+                    //För varje rad upprättas ett personobjekt.
                     Person person = new Person();
 
+                    //Raden som lagras i 'row' delas upp i en array utifrån kommatering.
                     string[] separatedFile = row.Split(',');
 
+                    //Dom separerade värdena som lagras i 'separatedFile' skjuts in i person-objektets properties och läggs sen till i 'personList'-listan.
                     person.Name = separatedFile[0];
                     person.Street = separatedFile[1];
                     person.ZipCode = separatedFile[2];

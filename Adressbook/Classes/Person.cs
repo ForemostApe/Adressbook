@@ -1,8 +1,4 @@
-﻿using System;
-using System.Reflection.Metadata.Ecma335;
-using System.Security.Policy;
-
-namespace Adressbook.Classes
+﻿namespace Adressbook.Classes
 {
     public class Person
     {
@@ -20,32 +16,16 @@ namespace Adressbook.Classes
 
 
         //Constructorn tar emot 6st strings som sen sätts som publika.
-        public Person(string aName, string aStreet, string aZipCode, string aCity, string aPhoneNumber, string aEmailAdress)
+        public Person(string name, string street, string zipCode, string city, string phoneNumber, string emailAdress)
         
         {
-            Name = aName;
-            Street = aStreet;
-            ZipCode = aZipCode;
-            City = aCity;
-            PhoneNumber = aPhoneNumber;
-            EmailAdress = aEmailAdress;
-
-            PassEntryToFileMgr();
+            Name = name;
+            Street = street;
+            ZipCode = zipCode;
+            City = city;
+            PhoneNumber = phoneNumber;
+            EmailAdress = emailAdress;
         }
-
-        public void PassEntryToFileMgr()
-        {
-            Person person = new Person();
-            person.Name = Name;
-            person.Street = Street;
-            person.ZipCode = ZipCode;
-            person.City = City;
-            person.PhoneNumber = PhoneNumber;
-            person.EmailAdress = EmailAdress;
-
-            FileManager fileManager = new FileManager(person);
-        }
-        
     }
 }
     
