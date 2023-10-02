@@ -63,7 +63,7 @@ namespace Adressbook
                         PopulateListView(entry);
                     }
                 }
-            
+
                 //Om man trycker på Sök-knappen utan att ha fyllt i något visas samtliga poster i listan.
                 else
                 {
@@ -102,7 +102,6 @@ namespace Adressbook
                 buttonModify.Visible = true;
             }
         }
-
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             if (listAdressEntries.SelectedItems.Count > 0)
@@ -117,34 +116,6 @@ namespace Adressbook
 
             ClearTextFields();
         }
-
-        private void PopulateListView(Person x)
-        {
-            ListViewItem list = new ListViewItem(x.Name);
-            list.SubItems.Add(x.Street); //Initierar ett nytt ListViewItem-objekt med namnet 'list' och hämtar item plus subitems från adressEntry-klassen.
-            list.SubItems.Add(x.ZipCode);
-            list.SubItems.Add(x.City);
-            list.SubItems.Add(x.PhoneNumber);
-            list.SubItems.Add(x.EmailAdress);
-            listAdressEntries.Items.Add(list); //Lägger till alla items i 'list'-objektet i det visuella fönstret.
-
-        }
-
-        private void ClearTextFields()
-        {
-            //Tömmer alla textfält för personuppgifter. Går det inte att göra genom någon form av loop?!
-            textName.Clear();
-            textStreet.Clear();
-            textZipCode.Clear();
-            textCity.Clear();
-            textPhoneNumber.Clear();
-            textEmailAdress.Clear();
-
-            //Eftersom alla fält är tömda kommer det som fylls i bli en ny post, därav visas Save-knappen och Ändra är dold.
-            buttonSave.Visible = true;
-            buttonModify.Visible = false;
-        }
-
         private void buttonModify_Click(object sender, EventArgs e)
         {
             Person person = new Person(textName.Text, textStreet.Text, textZipCode.Text, textCity.Text, textPhoneNumber.Text, textEmailAdress.Text);
@@ -171,6 +142,32 @@ namespace Adressbook
         private void button1_Click(object sender, EventArgs e)
         {
             ClearTextFields();
+        }
+        private void PopulateListView(Person x)
+        {
+            ListViewItem list = new ListViewItem(x.Name);
+            list.SubItems.Add(x.Street); //Initierar ett nytt ListViewItem-objekt med namnet 'list' och hämtar item plus subitems från adressEntry-klassen.
+            list.SubItems.Add(x.ZipCode);
+            list.SubItems.Add(x.City);
+            list.SubItems.Add(x.PhoneNumber);
+            list.SubItems.Add(x.EmailAdress);
+            listAdressEntries.Items.Add(list); //Lägger till alla items i 'list'-objektet i det visuella fönstret.
+
+        }
+
+        private void ClearTextFields()
+        {
+            //Tömmer alla textfält för personuppgifter. Går det inte att göra genom någon form av loop?!
+            textName.Clear();
+            textStreet.Clear();
+            textZipCode.Clear();
+            textCity.Clear();
+            textPhoneNumber.Clear();
+            textEmailAdress.Clear();
+
+            //Eftersom alla fält är tömda kommer det som fylls i bli en ny post, därav visas Save-knappen och Ändra är dold.
+            buttonSave.Visible = true;
+            buttonModify.Visible = false;
         }
     }
 }
