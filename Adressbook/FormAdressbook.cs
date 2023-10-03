@@ -126,13 +126,13 @@ namespace Adressbook
             listAdressEntries.Items.RemoveAt(selectedIndex);
 
             //Borde gå att fixa till en metod som tar emot ett index och ett ListViewItem, istället för att ha detta både i Modify-knappen OCH PopulateListView-metoden.
-            ListViewItem list = new ListViewItem(person.Name);
+            ListViewItem list = new ListViewItem(person.Name); //Initierar ett nytt ListViewItem-objekt med namnet 'list' och hämtar item plus subitems från adressEntry-klassen.
             list.SubItems.Add(person.Street);
             list.SubItems.Add(person.ZipCode);
             list.SubItems.Add(person.City);
             list.SubItems.Add(person.PhoneNumber);
             list.SubItems.Add(person.EmailAdress);
-            listAdressEntries.Items.Insert(selectedIndex, list);
+            listAdressEntries.Items.Insert(selectedIndex, list); //Lägger till alla items i 'list'-objektet i det visuella fönstret.
 
             FileManager fileManager = new FileManager(adressBook);
 
@@ -146,12 +146,12 @@ namespace Adressbook
         private void PopulateListView(Person x)
         {
             ListViewItem list = new ListViewItem(x.Name);
-            list.SubItems.Add(x.Street); //Initierar ett nytt ListViewItem-objekt med namnet 'list' och hämtar item plus subitems från adressEntry-klassen.
+            list.SubItems.Add(x.Street);
             list.SubItems.Add(x.ZipCode);
             list.SubItems.Add(x.City);
             list.SubItems.Add(x.PhoneNumber);
             list.SubItems.Add(x.EmailAdress);
-            listAdressEntries.Items.Add(list); //Lägger till alla items i 'list'-objektet i det visuella fönstret.
+            listAdressEntries.Items.Add(list);
 
         }
 

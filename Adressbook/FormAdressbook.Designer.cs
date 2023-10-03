@@ -124,7 +124,7 @@
             textName.Margin = new Padding(2, 1, 2, 1);
             textName.Name = "textName";
             textName.Size = new Size(181, 23);
-            textName.TabIndex = 6;
+            textName.TabIndex = 10;
             // 
             // textStreet
             // 
@@ -133,7 +133,7 @@
             textStreet.Margin = new Padding(2, 1, 2, 1);
             textStreet.Name = "textStreet";
             textStreet.Size = new Size(181, 23);
-            textStreet.TabIndex = 7;
+            textStreet.TabIndex = 20;
             // 
             // textZipCode
             // 
@@ -142,7 +142,7 @@
             textZipCode.Margin = new Padding(2, 1, 2, 1);
             textZipCode.Name = "textZipCode";
             textZipCode.Size = new Size(179, 23);
-            textZipCode.TabIndex = 8;
+            textZipCode.TabIndex = 30;
             // 
             // textCity
             // 
@@ -151,7 +151,7 @@
             textCity.Margin = new Padding(2, 1, 2, 1);
             textCity.Name = "textCity";
             textCity.Size = new Size(181, 23);
-            textCity.TabIndex = 9;
+            textCity.TabIndex = 40;
             // 
             // textPhoneNumber
             // 
@@ -160,7 +160,7 @@
             textPhoneNumber.Margin = new Padding(2, 1, 2, 1);
             textPhoneNumber.Name = "textPhoneNumber";
             textPhoneNumber.Size = new Size(181, 23);
-            textPhoneNumber.TabIndex = 10;
+            textPhoneNumber.TabIndex = 50;
             // 
             // textEmailAdress
             // 
@@ -169,7 +169,7 @@
             textEmailAdress.Margin = new Padding(2, 1, 2, 1);
             textEmailAdress.Name = "textEmailAdress";
             textEmailAdress.Size = new Size(181, 23);
-            textEmailAdress.TabIndex = 11;
+            textEmailAdress.TabIndex = 60;
             // 
             // listAdressEntries
             // 
@@ -222,7 +222,7 @@
             textSearchBox.Margin = new Padding(2, 1, 2, 1);
             textSearchBox.Name = "textSearchBox";
             textSearchBox.Size = new Size(350, 23);
-            textSearchBox.TabIndex = 13;
+            textSearchBox.TabIndex = 100;
             // 
             // buttonSave
             // 
@@ -230,7 +230,7 @@
             buttonSave.Margin = new Padding(2, 1, 2, 1);
             buttonSave.Name = "buttonSave";
             buttonSave.Size = new Size(81, 22);
-            buttonSave.TabIndex = 14;
+            buttonSave.TabIndex = 80;
             buttonSave.Text = "Spara";
             buttonSave.UseVisualStyleBackColor = true;
             buttonSave.Click += buttonSave_Click;
@@ -241,7 +241,7 @@
             buttonSearch.Margin = new Padding(2, 1, 2, 1);
             buttonSearch.Name = "buttonSearch";
             buttonSearch.Size = new Size(81, 23);
-            buttonSearch.TabIndex = 15;
+            buttonSearch.TabIndex = 110;
             buttonSearch.Text = "Sök";
             buttonSearch.UseVisualStyleBackColor = true;
             buttonSearch.Click += buttonSearch_Click;
@@ -252,7 +252,7 @@
             buttonDelete.Margin = new Padding(2, 1, 2, 1);
             buttonDelete.Name = "buttonDelete";
             buttonDelete.Size = new Size(81, 23);
-            buttonDelete.TabIndex = 16;
+            buttonDelete.TabIndex = 120;
             buttonDelete.Text = "Ta bort";
             buttonDelete.UseVisualStyleBackColor = true;
             buttonDelete.Click += buttonDelete_Click;
@@ -262,7 +262,7 @@
             buttonModify.Location = new Point(117, 327);
             buttonModify.Name = "buttonModify";
             buttonModify.Size = new Size(81, 23);
-            buttonModify.TabIndex = 17;
+            buttonModify.TabIndex = 90;
             buttonModify.Text = "Ändra";
             buttonModify.UseVisualStyleBackColor = true;
             buttonModify.Visible = false;
@@ -273,7 +273,7 @@
             buttonClear.Location = new Point(16, 327);
             buttonClear.Name = "buttonClear";
             buttonClear.Size = new Size(81, 23);
-            buttonClear.TabIndex = 18;
+            buttonClear.TabIndex = 70;
             buttonClear.Text = "Töm";
             buttonClear.UseVisualStyleBackColor = true;
             buttonClear.Click += button1_Click;
