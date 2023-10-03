@@ -53,12 +53,14 @@
             buttonDelete = new Button();
             buttonModify = new Button();
             buttonClear = new Button();
+            groupBox1 = new GroupBox();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // labelName
             // 
             labelName.AutoSize = true;
-            labelName.Location = new Point(28, 30);
+            labelName.Location = new Point(16, 25);
             labelName.Margin = new Padding(2, 0, 2, 0);
             labelName.Name = "labelName";
             labelName.Size = new Size(40, 15);
@@ -68,7 +70,7 @@
             // labelStreet
             // 
             labelStreet.AutoSize = true;
-            labelStreet.Location = new Point(28, 80);
+            labelStreet.Location = new Point(16, 75);
             labelStreet.Margin = new Padding(2, 0, 2, 0);
             labelStreet.Name = "labelStreet";
             labelStreet.Size = new Size(65, 15);
@@ -78,7 +80,7 @@
             // labelPostalCode
             // 
             labelPostalCode.AutoSize = true;
-            labelPostalCode.Location = new Point(28, 130);
+            labelPostalCode.Location = new Point(16, 125);
             labelPostalCode.Margin = new Padding(2, 0, 2, 0);
             labelPostalCode.Name = "labelPostalCode";
             labelPostalCode.Size = new Size(76, 15);
@@ -88,7 +90,7 @@
             // labelCity
             // 
             labelCity.AutoSize = true;
-            labelCity.Location = new Point(28, 180);
+            labelCity.Location = new Point(16, 175);
             labelCity.Margin = new Padding(2, 0, 2, 0);
             labelCity.Name = "labelCity";
             labelCity.Size = new Size(45, 15);
@@ -98,7 +100,7 @@
             // labelPhoneNumber
             // 
             labelPhoneNumber.AutoSize = true;
-            labelPhoneNumber.Location = new Point(28, 230);
+            labelPhoneNumber.Location = new Point(16, 225);
             labelPhoneNumber.Margin = new Padding(2, 0, 2, 0);
             labelPhoneNumber.Name = "labelPhoneNumber";
             labelPhoneNumber.Size = new Size(91, 15);
@@ -108,7 +110,7 @@
             // labelEmailAdress
             // 
             labelEmailAdress.AutoSize = true;
-            labelEmailAdress.Location = new Point(28, 280);
+            labelEmailAdress.Location = new Point(16, 275);
             labelEmailAdress.Margin = new Padding(2, 0, 2, 0);
             labelEmailAdress.Name = "labelEmailAdress";
             labelEmailAdress.Size = new Size(69, 15);
@@ -118,7 +120,7 @@
             // textName
             // 
             textName.BorderStyle = BorderStyle.FixedSingle;
-            textName.Location = new Point(28, 46);
+            textName.Location = new Point(16, 41);
             textName.Margin = new Padding(2, 1, 2, 1);
             textName.Name = "textName";
             textName.Size = new Size(181, 23);
@@ -127,7 +129,7 @@
             // textStreet
             // 
             textStreet.BorderStyle = BorderStyle.FixedSingle;
-            textStreet.Location = new Point(28, 96);
+            textStreet.Location = new Point(16, 91);
             textStreet.Margin = new Padding(2, 1, 2, 1);
             textStreet.Name = "textStreet";
             textStreet.Size = new Size(181, 23);
@@ -136,7 +138,7 @@
             // textZipCode
             // 
             textZipCode.BorderStyle = BorderStyle.FixedSingle;
-            textZipCode.Location = new Point(28, 146);
+            textZipCode.Location = new Point(16, 141);
             textZipCode.Margin = new Padding(2, 1, 2, 1);
             textZipCode.Name = "textZipCode";
             textZipCode.Size = new Size(179, 23);
@@ -145,7 +147,7 @@
             // textCity
             // 
             textCity.BorderStyle = BorderStyle.FixedSingle;
-            textCity.Location = new Point(28, 196);
+            textCity.Location = new Point(16, 191);
             textCity.Margin = new Padding(2, 1, 2, 1);
             textCity.Name = "textCity";
             textCity.Size = new Size(181, 23);
@@ -154,7 +156,7 @@
             // textPhoneNumber
             // 
             textPhoneNumber.BorderStyle = BorderStyle.FixedSingle;
-            textPhoneNumber.Location = new Point(28, 246);
+            textPhoneNumber.Location = new Point(16, 241);
             textPhoneNumber.Margin = new Padding(2, 1, 2, 1);
             textPhoneNumber.Name = "textPhoneNumber";
             textPhoneNumber.Size = new Size(181, 23);
@@ -163,7 +165,7 @@
             // textEmailAdress
             // 
             textEmailAdress.BorderStyle = BorderStyle.FixedSingle;
-            textEmailAdress.Location = new Point(28, 296);
+            textEmailAdress.Location = new Point(16, 291);
             textEmailAdress.Margin = new Padding(2, 1, 2, 1);
             textEmailAdress.Name = "textEmailAdress";
             textEmailAdress.Size = new Size(181, 23);
@@ -174,7 +176,7 @@
             listAdressEntries.BorderStyle = BorderStyle.FixedSingle;
             listAdressEntries.Columns.AddRange(new ColumnHeader[] { columnName, columnStreet, columnPostalCode, columnCity, columnPhoneNumber, columnEmailAdress });
             listAdressEntries.FullRowSelect = true;
-            listAdressEntries.Location = new Point(242, 96);
+            listAdressEntries.Location = new Point(242, 115);
             listAdressEntries.Margin = new Padding(2, 1, 2, 1);
             listAdressEntries.Name = "listAdressEntries";
             listAdressEntries.Size = new Size(750, 223);
@@ -216,7 +218,7 @@
             // textSearchBox
             // 
             textSearchBox.BorderStyle = BorderStyle.FixedSingle;
-            textSearchBox.Location = new Point(532, 46);
+            textSearchBox.Location = new Point(532, 65);
             textSearchBox.Margin = new Padding(2, 1, 2, 1);
             textSearchBox.Name = "textSearchBox";
             textSearchBox.Size = new Size(350, 23);
@@ -224,7 +226,7 @@
             // 
             // buttonSave
             // 
-            buttonSave.Location = new Point(129, 332);
+            buttonSave.Location = new Point(117, 327);
             buttonSave.Margin = new Padding(2, 1, 2, 1);
             buttonSave.Name = "buttonSave";
             buttonSave.Size = new Size(81, 22);
@@ -235,7 +237,7 @@
             // 
             // buttonSearch
             // 
-            buttonSearch.Location = new Point(911, 46);
+            buttonSearch.Location = new Point(911, 63);
             buttonSearch.Margin = new Padding(2, 1, 2, 1);
             buttonSearch.Name = "buttonSearch";
             buttonSearch.Size = new Size(81, 23);
@@ -246,7 +248,7 @@
             // 
             // buttonDelete
             // 
-            buttonDelete.Location = new Point(911, 332);
+            buttonDelete.Location = new Point(911, 352);
             buttonDelete.Margin = new Padding(2, 1, 2, 1);
             buttonDelete.Name = "buttonDelete";
             buttonDelete.Size = new Size(81, 23);
@@ -257,7 +259,7 @@
             // 
             // buttonModify
             // 
-            buttonModify.Location = new Point(129, 332);
+            buttonModify.Location = new Point(117, 327);
             buttonModify.Name = "buttonModify";
             buttonModify.Size = new Size(81, 23);
             buttonModify.TabIndex = 17;
@@ -268,7 +270,7 @@
             // 
             // buttonClear
             // 
-            buttonClear.Location = new Point(28, 332);
+            buttonClear.Location = new Point(16, 327);
             buttonClear.Name = "buttonClear";
             buttonClear.Size = new Size(81, 23);
             buttonClear.TabIndex = 18;
@@ -276,34 +278,46 @@
             buttonClear.UseVisualStyleBackColor = true;
             buttonClear.Click += button1_Click;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(textPhoneNumber);
+            groupBox1.Controls.Add(buttonClear);
+            groupBox1.Controls.Add(labelName);
+            groupBox1.Controls.Add(buttonModify);
+            groupBox1.Controls.Add(labelStreet);
+            groupBox1.Controls.Add(labelPostalCode);
+            groupBox1.Controls.Add(labelCity);
+            groupBox1.Controls.Add(buttonSave);
+            groupBox1.Controls.Add(labelPhoneNumber);
+            groupBox1.Controls.Add(labelEmailAdress);
+            groupBox1.Controls.Add(textName);
+            groupBox1.Controls.Add(textEmailAdress);
+            groupBox1.Controls.Add(textStreet);
+            groupBox1.Controls.Add(textZipCode);
+            groupBox1.Controls.Add(textCity);
+            groupBox1.Location = new Point(12, 24);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(216, 370);
+            groupBox1.TabIndex = 19;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Adressuppgifter";
+            // 
             // FormAdressbook
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1027, 383);
-            Controls.Add(buttonClear);
-            Controls.Add(buttonModify);
+            ClientSize = new Size(1027, 416);
+            Controls.Add(groupBox1);
             Controls.Add(buttonDelete);
             Controls.Add(buttonSearch);
-            Controls.Add(buttonSave);
             Controls.Add(textSearchBox);
             Controls.Add(listAdressEntries);
-            Controls.Add(textEmailAdress);
-            Controls.Add(textPhoneNumber);
-            Controls.Add(textCity);
-            Controls.Add(textZipCode);
-            Controls.Add(textStreet);
-            Controls.Add(textName);
-            Controls.Add(labelEmailAdress);
-            Controls.Add(labelPhoneNumber);
-            Controls.Add(labelCity);
-            Controls.Add(labelPostalCode);
-            Controls.Add(labelStreet);
-            Controls.Add(labelName);
             Margin = new Padding(2, 1, 2, 1);
             Name = "FormAdressbook";
             Text = "FormAdressbook";
             Load += FormAdressbook_Load;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -335,5 +349,6 @@
         private ColumnHeader columnEmailAdress;
         private Button buttonModify;
         private Button buttonClear;
+        private GroupBox groupBox1;
     }
 }
