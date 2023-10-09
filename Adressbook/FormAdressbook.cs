@@ -27,11 +27,8 @@ namespace Adressbook
             //Initierar ett nytt objekt och skickar värdena från textboxarna till constructorn i AdressEntry-klassen, lägger sen till objektet i 'adressBook'-listan.
             Person person = new Person(textName.Text, textStreet.Text, textZipCode.Text, textCity.Text, textPhoneNumber.Text, textEmailAdress.Text);
 
-            //Lägger till person-objektet i listan 'adressBook'.
             adressBook.Add(person);
-
             FileManager fileManager = new FileManager(adressBook);
-
             PopulateListView(person);
 
             //Anropar metoden 'ClearTextFields()' som tömmer textfälten.
@@ -104,8 +101,10 @@ namespace Adressbook
         }
         private void buttonDelete_Click(object sender, EventArgs e)
         {
+            //Kontrollerar så att listan har entries, resulterar annars i ett exception-error.
             if (listAdressEntries.SelectedItems.Count > 0)
             {
+                //Tar bort den valda raden ur adressBook-listan och listviewboxen samt skriver den nya adressbook-litan till fil.
                 int selectedIndex = listAdressEntries.SelectedItems[0].Index;
                 adressBook.RemoveAt(selectedIndex);
                 listAdressEntries.Items.RemoveAt(selectedIndex);
@@ -126,6 +125,7 @@ namespace Adressbook
             listAdressEntries.Items.RemoveAt(selectedIndex);
 
             //Borde gå att fixa till en metod som tar emot ett index och ett ListViewItem, istället för att ha detta både i Modify-knappen OCH PopulateListView-metoden.
+
             ListViewItem list = new ListViewItem(person.Name); //Initierar ett nytt ListViewItem-objekt med namnet 'list' och hämtar item plus subitems från adressEntry-klassen.
             list.SubItems.Add(person.Street);
             list.SubItems.Add(person.ZipCode);
@@ -143,6 +143,7 @@ namespace Adressbook
         {
             ClearTextFields();
         }
+
         private void PopulateListView(Person x)
         {
             ListViewItem list = new ListViewItem(x.Name);
