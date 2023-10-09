@@ -37,8 +37,6 @@ namespace Adressbook
 
         private void listAdressEntries_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
@@ -55,25 +53,17 @@ namespace Adressbook
                 if (searchCondition.Length > 0)
                 {
                     //Söker på sökkriteriet man fyllt i Sök-fältet och visar träffar.
-                    if (entry.Name.ToString().ToLower().Contains(searchCondition.ToLower().Trim()) || entry.City.ToString().ToLower().Contains(searchCondition.ToLower().Trim()))
-                    {
-                        PopulateListView(entry);
-                    }
+                    if (entry.Name.ToString().ToLower().Contains(searchCondition.ToLower().Trim()) || entry.City.ToString().ToLower().Contains(searchCondition.ToLower().Trim())) PopulateListView(entry);
                 }
 
                 //Om man trycker på Sök-knappen utan att ha fyllt i något visas samtliga poster i listan.
                 else
                 {
                     listAdressEntries.Items.Clear();
-
-                    foreach (Person entries in adressBook)
-                    {
-                        PopulateListView(entries);
-                    }
+                    foreach (Person entries in adressBook) PopulateListView(entries);
                 }
             }
             ClearTextFields();
-
         }
 
         private void listAdressEntries_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -144,14 +134,14 @@ namespace Adressbook
             ClearTextFields();
         }
 
-        private void PopulateListView(Person x)
+        private void PopulateListView(Person listEntry)
         {
-            ListViewItem list = new ListViewItem(x.Name);
-            list.SubItems.Add(x.Street);
-            list.SubItems.Add(x.ZipCode);
-            list.SubItems.Add(x.City);
-            list.SubItems.Add(x.PhoneNumber);
-            list.SubItems.Add(x.EmailAdress);
+            ListViewItem list = new ListViewItem(listEntry.Name);
+            list.SubItems.Add(listEntry.Street);
+            list.SubItems.Add(listEntry.ZipCode);
+            list.SubItems.Add(listEntry.City);
+            list.SubItems.Add(listEntry.PhoneNumber);
+            list.SubItems.Add(listEntry.EmailAdress);
             listAdressEntries.Items.Add(list);
 
         }

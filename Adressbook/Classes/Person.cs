@@ -1,4 +1,8 @@
-﻿namespace Adressbook.Classes
+﻿using System.Net.Mail;
+using System.Reflection.Emit;
+using System.Xml.Linq;
+
+namespace Adressbook.Classes
 {
     public class Person
     {
@@ -11,7 +15,6 @@
 
         public Person()
         {
-            
         }
 
 
